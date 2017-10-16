@@ -7,14 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B80710060F4066537B7C9C3E /* Pods_TestPhotoView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19074B13B5A678919BAB16DC /* Pods_TestPhotoView.framework */; };
+		F9133E561F94AA490083D8A6 /* MediaCaptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E551F94AA490083D8A6 /* MediaCaptionView.swift */; };
+		F9133E581F94AA830083D8A6 /* MediaTapDetectingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E571F94AA830083D8A6 /* MediaTapDetectingView.swift */; };
+		F9133E5A1F94AB1D0083D8A6 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E591F94AB1D0083D8A6 /* UIImageExtension.swift */; };
 		F9661FAC1F94905300829EDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FAB1F94905300829EDE /* AppDelegate.swift */; };
 		F9661FAE1F94905300829EDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FAD1F94905300829EDE /* ViewController.swift */; };
 		F9661FB11F94905300829EDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9661FAF1F94905300829EDE /* Main.storyboard */; };
 		F9661FB31F94905300829EDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9661FB21F94905300829EDE /* Assets.xcassets */; };
 		F9661FB61F94905300829EDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9661FB41F94905300829EDE /* LaunchScreen.storyboard */; };
+		F9661FBE1F94909E00829EDE /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FBD1F94909E00829EDE /* Media.swift */; };
+		F9661FC11F94920200829EDE /* MediaBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FBF1F94920200829EDE /* MediaBrowser.swift */; };
+		F9661FC21F94920200829EDE /* MediaBrowserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FC01F94920200829EDE /* MediaBrowserDelegate.swift */; };
+		F9661FC41F94929A00829EDE /* MediaZoomingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FC31F94929A00829EDE /* MediaZoomingScrollView.swift */; };
+		F9661FC61F94941900829EDE /* MediaTapDetectingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FC51F94941900829EDE /* MediaTapDetectingImageView.swift */; };
+		F9D923431F94A75800779A8C /* MediaGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D923421F94A75700779A8C /* MediaGridViewController.swift */; };
+		F9D923451F94A78400779A8C /* MediaGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D923441F94A78400779A8C /* MediaGridCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19074B13B5A678919BAB16DC /* Pods_TestPhotoView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestPhotoView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D0AE93DDD000447746071A6 /* Pods-TestPhotoView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhotoView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhotoView/Pods-TestPhotoView.debug.xcconfig"; sourceTree = "<group>"; };
+		7E16B88468FAB965E1F34C35 /* Pods-TestPhotoView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhotoView.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhotoView/Pods-TestPhotoView.release.xcconfig"; sourceTree = "<group>"; };
+		F9133E551F94AA490083D8A6 /* MediaCaptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCaptionView.swift; sourceTree = "<group>"; };
+		F9133E571F94AA830083D8A6 /* MediaTapDetectingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTapDetectingView.swift; sourceTree = "<group>"; };
+		F9133E591F94AB1D0083D8A6 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		F9661FA81F94905300829EDE /* TestPhotoView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPhotoView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9661FAB1F94905300829EDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9661FAD1F94905300829EDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +39,13 @@
 		F9661FB21F94905300829EDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9661FB51F94905300829EDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9661FB71F94905300829EDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9661FBD1F94909E00829EDE /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		F9661FBF1F94920200829EDE /* MediaBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaBrowser.swift; sourceTree = "<group>"; };
+		F9661FC01F94920200829EDE /* MediaBrowserDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaBrowserDelegate.swift; sourceTree = "<group>"; };
+		F9661FC31F94929A00829EDE /* MediaZoomingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaZoomingScrollView.swift; sourceTree = "<group>"; };
+		F9661FC51F94941900829EDE /* MediaTapDetectingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTapDetectingImageView.swift; sourceTree = "<group>"; };
+		F9D923421F94A75700779A8C /* MediaGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGridViewController.swift; sourceTree = "<group>"; };
+		F9D923441F94A78400779A8C /* MediaGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGridCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B80710060F4066537B7C9C3E /* Pods_TestPhotoView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE66A0A145D6FFC36A94A6B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D0AE93DDD000447746071A6 /* Pods-TestPhotoView.debug.xcconfig */,
+				7E16B88468FAB965E1F34C35 /* Pods-TestPhotoView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D0DE1EF591966B2303AF6B28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19074B13B5A678919BAB16DC /* Pods_TestPhotoView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F9661F9F1F94905300829EDE = {
 			isa = PBXGroup;
 			children = (
 				F9661FAA1F94905300829EDE /* TestPhotoView */,
 				F9661FA91F94905300829EDE /* Products */,
+				AE66A0A145D6FFC36A94A6B2 /* Pods */,
+				D0DE1EF591966B2303AF6B28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +98,16 @@
 		F9661FAA1F94905300829EDE /* TestPhotoView */ = {
 			isa = PBXGroup;
 			children = (
+				F9661FBD1F94909E00829EDE /* Media.swift */,
+				F9661FC31F94929A00829EDE /* MediaZoomingScrollView.swift */,
+				F9661FBF1F94920200829EDE /* MediaBrowser.swift */,
+				F9661FC51F94941900829EDE /* MediaTapDetectingImageView.swift */,
+				F9133E571F94AA830083D8A6 /* MediaTapDetectingView.swift */,
+				F9D923441F94A78400779A8C /* MediaGridCell.swift */,
+				F9133E551F94AA490083D8A6 /* MediaCaptionView.swift */,
+				F9D923421F94A75700779A8C /* MediaGridViewController.swift */,
+				F9133E591F94AB1D0083D8A6 /* UIImageExtension.swift */,
+				F9661FC01F94920200829EDE /* MediaBrowserDelegate.swift */,
 				F9661FAB1F94905300829EDE /* AppDelegate.swift */,
 				F9661FAD1F94905300829EDE /* ViewController.swift */,
 				F9661FAF1F94905300829EDE /* Main.storyboard */,
@@ -71,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9661FBA1F94905300829EDE /* Build configuration list for PBXNativeTarget "TestPhotoView" */;
 			buildPhases = (
+				8B67D352B0C239F6FCA12F1A /* [CP] Check Pods Manifest.lock */,
 				F9661FA41F94905300829EDE /* Sources */,
 				F9661FA51F94905300829EDE /* Frameworks */,
 				F9661FA61F94905300829EDE /* Resources */,
+				1CF758E4A33A2811B9EB31BA /* [CP] Embed Pods Frameworks */,
+				E11165657B4472E4F23D3EE7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +188,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CF758E4A33A2811B9EB31BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TestPhotoView/Pods-TestPhotoView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestPhotoView/Pods-TestPhotoView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B67D352B0C239F6FCA12F1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestPhotoView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E11165657B4472E4F23D3EE7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestPhotoView/Pods-TestPhotoView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F9661FA41F94905300829EDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9133E561F94AA490083D8A6 /* MediaCaptionView.swift in Sources */,
+				F9661FC21F94920200829EDE /* MediaBrowserDelegate.swift in Sources */,
 				F9661FAE1F94905300829EDE /* ViewController.swift in Sources */,
+				F9661FC11F94920200829EDE /* MediaBrowser.swift in Sources */,
+				F9133E581F94AA830083D8A6 /* MediaTapDetectingView.swift in Sources */,
 				F9661FAC1F94905300829EDE /* AppDelegate.swift in Sources */,
+				F9661FC41F94929A00829EDE /* MediaZoomingScrollView.swift in Sources */,
+				F9D923431F94A75800779A8C /* MediaGridViewController.swift in Sources */,
+				F9D923451F94A78400779A8C /* MediaGridCell.swift in Sources */,
+				F9661FBE1F94909E00829EDE /* Media.swift in Sources */,
+				F9661FC61F94941900829EDE /* MediaTapDetectingImageView.swift in Sources */,
+				F9133E5A1F94AB1D0083D8A6 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +393,7 @@
 		};
 		F9661FBB1F94905300829EDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0AE93DDD000447746071A6 /* Pods-TestPhotoView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +409,7 @@
 		};
 		F9661FBC1F94905300829EDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E16B88468FAB965E1F34C35 /* Pods-TestPhotoView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
