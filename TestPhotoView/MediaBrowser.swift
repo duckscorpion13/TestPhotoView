@@ -588,10 +588,10 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
         }
         
         // Set style
-        if !leaveStatusBarAlone && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.phone {
-            previousStatusBarStyle = UIApplication.shared.statusBarStyle
-            UIApplication.shared.setStatusBarStyle(statusBarStyle, animated: animated)
-        }
+//        if !leaveStatusBarAlone && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.phone {
+//            previousStatusBarStyle = UIApplication.shared.statusBarStyle
+//            UIApplication.shared.setStatusBarStyle(statusBarStyle, animated: animated)
+//        }
 
         setNavBarAppearance(animated: animated)
         
@@ -673,9 +673,9 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
         setControlsHidden(hidden: false, animated: false, permanent: true)
         
         // Status bar
-        if !leaveStatusBarAlone && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.phone {
-            UIApplication.shared.setStatusBarStyle(previousStatusBarStyle, animated: animated)
-        }
+//        if !leaveStatusBarAlone && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.phone {
+//            UIApplication.shared.setStatusBarStyle(previousStatusBarStyle, animated: animated)
+//        }
 
         // Super
         super.viewWillDisappear(animated)
@@ -1873,7 +1873,7 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
             if !isVCBasedStatusBarAppearance {
                 // falsen-view controller based
                 statusBarShouldBeHidden = hidden
-                UIApplication.shared.setStatusBarHidden(hidden, with: animated ? UIStatusBarAnimation.slide : UIStatusBarAnimation.none)
+//                UIApplication.shared.setStatusBarHidden(hidden, with: animated ? UIStatusBarAnimation.slide : UIStatusBarAnimation.none)
                 
             } else {
                 // View controller based so animate away

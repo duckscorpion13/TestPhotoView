@@ -229,26 +229,40 @@ public class Media: NSObject {
     // Load from asset library async
     private func performLoadUnderlyingImageAndNotifyWithAssetsLibraryURL(url: URL) {
         DispatchQueue.global(qos: .default).async {
-            let assetslibrary = ALAssetsLibrary()
-            assetslibrary.asset(
-                for: url,
-                resultBlock: { asset in
-                    let rep = asset?.defaultRepresentation()
-                    guard let cgImage = rep?.fullScreenImage().takeUnretainedValue() else { return }
-                    self.underlyingImage = UIImage(cgImage: cgImage)
-                    
-                    DispatchQueue.main.async() {
-                        self.imageLoadingComplete()
-                    }
-            },
-                    failureBlock: { error in
-                        self.underlyingImage = nil
-                        
-                        DispatchQueue.main.async() {
-                            self.imageLoadingComplete()
-                        }
-                    })
+            let myAssets = PHAsset.fetchAssets(withLocalIdentifiers: [url.absoluteString], options: nil)
+            if let first = myAssets.firstObject{
+                PHImageManager.default().requestImage(for: first,
+                                                      targetSize: PHImageManagerMaximumSize , contentMode: .default,
+                                                      options: nil, resultHandler: {
+                                                        (image, _: [AnyHashable : Any]?) in
+                                                        self.underlyingImage = image
+                                                        
+                                                        DispatchQueue.main.async() {
+                                                            self.imageLoadingComplete()
+                                                        }
+                })
+            }
         }
+//            let assetslibrary = ALAssetsLibrary()
+//            assetslibrary.asset(
+//                for: url,
+//                resultBlock: { asset in
+//                    let rep = asset?.defaultRepresentation()
+//                    guard let cgImage = rep?.fullScreenImage().takeUnretainedValue() else { return }
+//                    self.underlyingImage = UIImage(cgImage: cgImage)
+//
+//                    DispatchQueue.main.async() {
+//                        self.imageLoadingComplete()
+//                    }
+//            },
+//                    failureBlock: { error in
+//                        self.underlyingImage = nil
+//
+//                        DispatchQueue.main.async() {
+//                            self.imageLoadingComplete()
+//                        }
+//                    })
+//        }
     }
 
     // Load from photos library
