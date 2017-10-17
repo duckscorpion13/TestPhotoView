@@ -71,7 +71,7 @@ class MediaGridCell: UICollectionViewCell {
                                 for: .selected)
         
         selectedButton.addTarget(self, action: #selector(MediaGridCell.selectionButtonPressed), for: .touchDown)
-        selectedButton.isHidden = true
+//        selectedButton.isHidden = true
         selectedButton.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
         addSubview(selectedButton)
         

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B80710060F4066537B7C9C3E /* Pods_TestPhotoView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19074B13B5A678919BAB16DC /* Pods_TestPhotoView.framework */; };
 		F9133E561F94AA490083D8A6 /* MediaCaptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E551F94AA490083D8A6 /* MediaCaptionView.swift */; };
-		F9133E581F94AA830083D8A6 /* MediaTapDetectingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E571F94AA830083D8A6 /* MediaTapDetectingView.swift */; };
 		F9133E5A1F94AB1D0083D8A6 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E591F94AB1D0083D8A6 /* UIImageExtension.swift */; };
 		F9661FAC1F94905300829EDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FAB1F94905300829EDE /* AppDelegate.swift */; };
 		F9661FAE1F94905300829EDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FAD1F94905300829EDE /* ViewController.swift */; };
@@ -30,7 +29,6 @@
 		4D0AE93DDD000447746071A6 /* Pods-TestPhotoView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhotoView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhotoView/Pods-TestPhotoView.debug.xcconfig"; sourceTree = "<group>"; };
 		7E16B88468FAB965E1F34C35 /* Pods-TestPhotoView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhotoView.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhotoView/Pods-TestPhotoView.release.xcconfig"; sourceTree = "<group>"; };
 		F9133E551F94AA490083D8A6 /* MediaCaptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCaptionView.swift; sourceTree = "<group>"; };
-		F9133E571F94AA830083D8A6 /* MediaTapDetectingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTapDetectingView.swift; sourceTree = "<group>"; };
 		F9133E591F94AB1D0083D8A6 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		F9661FA81F94905300829EDE /* TestPhotoView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPhotoView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9661FAB1F94905300829EDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				F9661FC31F94929A00829EDE /* MediaZoomingScrollView.swift */,
 				F9661FBF1F94920200829EDE /* MediaBrowser.swift */,
 				F9661FC51F94941900829EDE /* MediaTapDetectingImageView.swift */,
-				F9133E571F94AA830083D8A6 /* MediaTapDetectingView.swift */,
 				F9D923441F94A78400779A8C /* MediaGridCell.swift */,
 				F9133E551F94AA490083D8A6 /* MediaCaptionView.swift */,
 				F9D923421F94A75700779A8C /* MediaGridViewController.swift */,
@@ -251,7 +248,6 @@
 				F9661FC21F94920200829EDE /* MediaBrowserDelegate.swift in Sources */,
 				F9661FAE1F94905300829EDE /* ViewController.swift in Sources */,
 				F9661FC11F94920200829EDE /* MediaBrowser.swift in Sources */,
-				F9133E581F94AA830083D8A6 /* MediaTapDetectingView.swift in Sources */,
 				F9661FAC1F94905300829EDE /* AppDelegate.swift in Sources */,
 				F9661FC41F94929A00829EDE /* MediaZoomingScrollView.swift in Sources */,
 				F9D923431F94A75800779A8C /* MediaGridViewController.swift in Sources */,

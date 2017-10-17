@@ -9,7 +9,8 @@
 import UIKit
 //import UICircularProgressRing
 
-class MediaZoomingScrollView: UIScrollView, UIScrollViewDelegate, TapDetectingImageViewDelegate, TapDetectingViewDelegate {
+class MediaZoomingScrollView: UIScrollView, UIScrollViewDelegate, TapDetectingImageViewDelegate
+{
     var index = 0
     var media: Media?
     weak var captionView: MediaCaptionView?
@@ -18,7 +19,7 @@ class MediaZoomingScrollView: UIScrollView, UIScrollViewDelegate, TapDetectingIm
     var loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 140, y: 30, width: 40, height: 40))
     
     weak var mediaBrowser: MediaBrowser!
-    var tapView = MediaTapDetectingView(frame: .zero) // for background taps
+//    var tapView = MediaTapDetectingView(frame: .zero) // for background taps
     var photoImageView = MediaTapDetectingImageView(frame: .zero)
     var loadingError: UIImageView?
     
@@ -29,12 +30,12 @@ class MediaZoomingScrollView: UIScrollView, UIScrollViewDelegate, TapDetectingIm
         index = Int.max
         self.mediaBrowser = mediaBrowser
         
-        // Tap view for background
-        tapView = MediaTapDetectingView(frame: bounds)
-        tapView.tapDelegate = self
-        tapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        tapView.backgroundColor = UIColor.black
-        addSubview(tapView)
+//        // Tap view for background
+//        tapView = MediaTapDetectingView(frame: bounds)
+//        tapView.tapDelegate = self
+//        tapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        tapView.backgroundColor = UIColor.black
+//        addSubview(tapView)
         
         // Image view
         photoImageView.tapDelegate = self
@@ -95,7 +96,7 @@ class MediaZoomingScrollView: UIScrollView, UIScrollViewDelegate, TapDetectingIm
     
     public override var backgroundColor: UIColor? {
         set(color) {
-            tapView.backgroundColor = color
+//            tapView.backgroundColor = color
             super.backgroundColor = color
         }
         
@@ -327,7 +328,7 @@ class MediaZoomingScrollView: UIScrollView, UIScrollViewDelegate, TapDetectingIm
     
     override func layoutSubviews() {
         // Update tap view frame
-        tapView.frame = bounds
+//        tapView.frame = bounds
         
         // Position indicators (centre does not seem to work!)
         if !loadingIndicator.isHidden {

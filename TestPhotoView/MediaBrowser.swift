@@ -1158,7 +1158,7 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
                 //MWLog(@"Removed page at index %lu", (unsigned long)pageIndex)
             }
         }
-        // 확인 필요!
+        
         visiblePages = visiblePages.subtracting(recycledPages)
         
         while recycledPages.count > 2 { // Only keep 2 recycled pages
