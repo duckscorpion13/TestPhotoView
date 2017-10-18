@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         browser.enableSwipeToDismiss = true
         browser.autoPlayOnAppear = true
         browser.cachingImageCount = 2
-        browser.setCurrentIndex(at: 0)
+        browser.setCurrentIndex(at: 2)
         
 //        if (browser.displaySelectionButtons) {
             self.selections.removeAll()
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
 //        }
         
         if (0 == 0) {
-        self.navigationController?.pushViewController(browser, animated: true)
+            self.navigationController?.pushViewController(browser, animated: true)
         } else {
             let nc = UINavigationController(rootViewController: browser)
             nc.modalTransitionStyle = .crossDissolve

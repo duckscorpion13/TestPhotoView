@@ -8,42 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		B80710060F4066537B7C9C3E /* Pods_TestPhotoView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19074B13B5A678919BAB16DC /* Pods_TestPhotoView.framework */; };
-		F9133E561F94AA490083D8A6 /* MediaCaptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E551F94AA490083D8A6 /* MediaCaptionView.swift */; };
-		F9133E5A1F94AB1D0083D8A6 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E591F94AB1D0083D8A6 /* UIImageExtension.swift */; };
+		F9133E6A1F9714D80083D8A6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9133E5D1F9714A90083D8A6 /* Info.plist */; };
+		F9133E6B1F9714DD0083D8A6 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E5E1F9714A90083D8A6 /* Media.swift */; };
+		F9133E6C1F9714F00083D8A6 /* MediaBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E601F9714A90083D8A6 /* MediaBrowser.swift */; };
+		F9133E6D1F9714F40083D8A6 /* MediaBrowserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E621F9714A90083D8A6 /* MediaBrowserDelegate.swift */; };
+		F9133E6E1F9714F80083D8A6 /* MediaCaptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E631F9714A90083D8A6 /* MediaCaptionView.swift */; };
+		F9133E6F1F9714FC0083D8A6 /* MediaGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E641F9714A90083D8A6 /* MediaGridCell.swift */; };
+		F9133E701F9714FF0083D8A6 /* MediaGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E651F9714A90083D8A6 /* MediaGridViewController.swift */; };
+		F9133E711F9715040083D8A6 /* MediaTapDetectingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E661F9714A90083D8A6 /* MediaTapDetectingImageView.swift */; };
+		F9133E731F97150C0083D8A6 /* MediaZoomingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E681F9714A90083D8A6 /* MediaZoomingScrollView.swift */; };
+		F9133E741F9715100083D8A6 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E691F9714A90083D8A6 /* UIImageExtension.swift */; };
 		F9661FAC1F94905300829EDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FAB1F94905300829EDE /* AppDelegate.swift */; };
 		F9661FAE1F94905300829EDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FAD1F94905300829EDE /* ViewController.swift */; };
 		F9661FB11F94905300829EDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9661FAF1F94905300829EDE /* Main.storyboard */; };
-		F9661FB31F94905300829EDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9661FB21F94905300829EDE /* Assets.xcassets */; };
 		F9661FB61F94905300829EDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9661FB41F94905300829EDE /* LaunchScreen.storyboard */; };
-		F9661FBE1F94909E00829EDE /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FBD1F94909E00829EDE /* Media.swift */; };
-		F9661FC11F94920200829EDE /* MediaBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FBF1F94920200829EDE /* MediaBrowser.swift */; };
-		F9661FC21F94920200829EDE /* MediaBrowserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FC01F94920200829EDE /* MediaBrowserDelegate.swift */; };
-		F9661FC41F94929A00829EDE /* MediaZoomingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FC31F94929A00829EDE /* MediaZoomingScrollView.swift */; };
-		F9661FC61F94941900829EDE /* MediaTapDetectingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FC51F94941900829EDE /* MediaTapDetectingImageView.swift */; };
-		F9D923431F94A75800779A8C /* MediaGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D923421F94A75700779A8C /* MediaGridViewController.swift */; };
-		F9D923451F94A78400779A8C /* MediaGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D923441F94A78400779A8C /* MediaGridCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		19074B13B5A678919BAB16DC /* Pods_TestPhotoView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestPhotoView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D0AE93DDD000447746071A6 /* Pods-TestPhotoView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhotoView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhotoView/Pods-TestPhotoView.debug.xcconfig"; sourceTree = "<group>"; };
 		7E16B88468FAB965E1F34C35 /* Pods-TestPhotoView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhotoView.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhotoView/Pods-TestPhotoView.release.xcconfig"; sourceTree = "<group>"; };
-		F9133E551F94AA490083D8A6 /* MediaCaptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCaptionView.swift; sourceTree = "<group>"; };
-		F9133E591F94AB1D0083D8A6 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		F9133E5D1F9714A90083D8A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9133E5E1F9714A90083D8A6 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		F9133E5F1F9714A90083D8A6 /* MediaBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaBrowser.h; sourceTree = "<group>"; };
+		F9133E601F9714A90083D8A6 /* MediaBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaBrowser.swift; sourceTree = "<group>"; };
+		F9133E611F9714A90083D8A6 /* MediaBrowser.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MediaBrowser.xcassets; sourceTree = "<group>"; };
+		F9133E621F9714A90083D8A6 /* MediaBrowserDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaBrowserDelegate.swift; sourceTree = "<group>"; };
+		F9133E631F9714A90083D8A6 /* MediaCaptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCaptionView.swift; sourceTree = "<group>"; };
+		F9133E641F9714A90083D8A6 /* MediaGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGridCell.swift; sourceTree = "<group>"; };
+		F9133E651F9714A90083D8A6 /* MediaGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGridViewController.swift; sourceTree = "<group>"; };
+		F9133E661F9714A90083D8A6 /* MediaTapDetectingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTapDetectingImageView.swift; sourceTree = "<group>"; };
+		F9133E681F9714A90083D8A6 /* MediaZoomingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaZoomingScrollView.swift; sourceTree = "<group>"; };
+		F9133E691F9714A90083D8A6 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		F9661FA81F94905300829EDE /* TestPhotoView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPhotoView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9661FAB1F94905300829EDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9661FAD1F94905300829EDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F9661FB01F94905300829EDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F9661FB21F94905300829EDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9661FB51F94905300829EDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9661FB71F94905300829EDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9661FBD1F94909E00829EDE /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
-		F9661FBF1F94920200829EDE /* MediaBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaBrowser.swift; sourceTree = "<group>"; };
-		F9661FC01F94920200829EDE /* MediaBrowserDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaBrowserDelegate.swift; sourceTree = "<group>"; };
-		F9661FC31F94929A00829EDE /* MediaZoomingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaZoomingScrollView.swift; sourceTree = "<group>"; };
-		F9661FC51F94941900829EDE /* MediaTapDetectingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTapDetectingImageView.swift; sourceTree = "<group>"; };
-		F9D923421F94A75700779A8C /* MediaGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGridViewController.swift; sourceTree = "<group>"; };
-		F9D923441F94A78400779A8C /* MediaGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGridCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F9133E5C1F9714A90083D8A6 /* MediaBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				F9133E5D1F9714A90083D8A6 /* Info.plist */,
+				F9133E5E1F9714A90083D8A6 /* Media.swift */,
+				F9133E5F1F9714A90083D8A6 /* MediaBrowser.h */,
+				F9133E601F9714A90083D8A6 /* MediaBrowser.swift */,
+				F9133E611F9714A90083D8A6 /* MediaBrowser.xcassets */,
+				F9133E621F9714A90083D8A6 /* MediaBrowserDelegate.swift */,
+				F9133E631F9714A90083D8A6 /* MediaCaptionView.swift */,
+				F9133E641F9714A90083D8A6 /* MediaGridCell.swift */,
+				F9133E651F9714A90083D8A6 /* MediaGridViewController.swift */,
+				F9133E661F9714A90083D8A6 /* MediaTapDetectingImageView.swift */,
+				F9133E681F9714A90083D8A6 /* MediaZoomingScrollView.swift */,
+				F9133E691F9714A90083D8A6 /* UIImageExtension.swift */,
+			);
+			path = MediaBrowser;
+			sourceTree = "<group>";
+		};
 		F9661F9F1F94905300829EDE = {
 			isa = PBXGroup;
 			children = (
@@ -96,19 +117,10 @@
 		F9661FAA1F94905300829EDE /* TestPhotoView */ = {
 			isa = PBXGroup;
 			children = (
-				F9661FBD1F94909E00829EDE /* Media.swift */,
-				F9661FC31F94929A00829EDE /* MediaZoomingScrollView.swift */,
-				F9661FBF1F94920200829EDE /* MediaBrowser.swift */,
-				F9661FC51F94941900829EDE /* MediaTapDetectingImageView.swift */,
-				F9D923441F94A78400779A8C /* MediaGridCell.swift */,
-				F9133E551F94AA490083D8A6 /* MediaCaptionView.swift */,
-				F9D923421F94A75700779A8C /* MediaGridViewController.swift */,
-				F9133E591F94AB1D0083D8A6 /* UIImageExtension.swift */,
-				F9661FC01F94920200829EDE /* MediaBrowserDelegate.swift */,
+				F9133E5C1F9714A90083D8A6 /* MediaBrowser */,
 				F9661FAB1F94905300829EDE /* AppDelegate.swift */,
 				F9661FAD1F94905300829EDE /* ViewController.swift */,
 				F9661FAF1F94905300829EDE /* Main.storyboard */,
-				F9661FB21F94905300829EDE /* Assets.xcassets */,
 				F9661FB41F94905300829EDE /* LaunchScreen.storyboard */,
 				F9661FB71F94905300829EDE /* Info.plist */,
 			);
@@ -177,8 +189,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9133E6A1F9714D80083D8A6 /* Info.plist in Resources */,
 				F9661FB61F94905300829EDE /* LaunchScreen.storyboard in Resources */,
-				F9661FB31F94905300829EDE /* Assets.xcassets in Resources */,
 				F9661FB11F94905300829EDE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,17 +256,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9133E561F94AA490083D8A6 /* MediaCaptionView.swift in Sources */,
-				F9661FC21F94920200829EDE /* MediaBrowserDelegate.swift in Sources */,
+				F9133E6D1F9714F40083D8A6 /* MediaBrowserDelegate.swift in Sources */,
 				F9661FAE1F94905300829EDE /* ViewController.swift in Sources */,
-				F9661FC11F94920200829EDE /* MediaBrowser.swift in Sources */,
+				F9133E6E1F9714F80083D8A6 /* MediaCaptionView.swift in Sources */,
+				F9133E731F97150C0083D8A6 /* MediaZoomingScrollView.swift in Sources */,
+				F9133E6C1F9714F00083D8A6 /* MediaBrowser.swift in Sources */,
+				F9133E711F9715040083D8A6 /* MediaTapDetectingImageView.swift in Sources */,
+				F9133E6F1F9714FC0083D8A6 /* MediaGridCell.swift in Sources */,
+				F9133E701F9714FF0083D8A6 /* MediaGridViewController.swift in Sources */,
 				F9661FAC1F94905300829EDE /* AppDelegate.swift in Sources */,
-				F9661FC41F94929A00829EDE /* MediaZoomingScrollView.swift in Sources */,
-				F9D923431F94A75800779A8C /* MediaGridViewController.swift in Sources */,
-				F9D923451F94A78400779A8C /* MediaGridCell.swift in Sources */,
-				F9661FBE1F94909E00829EDE /* Media.swift in Sources */,
-				F9661FC61F94941900829EDE /* MediaTapDetectingImageView.swift in Sources */,
-				F9133E5A1F94AB1D0083D8A6 /* UIImageExtension.swift in Sources */,
+				F9133E6B1F9714DD0083D8A6 /* Media.swift in Sources */,
+				F9133E741F9715100083D8A6 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -379,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -395,6 +407,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9EZG3V6S8;
 				INFOPLIST_FILE = TestPhotoView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lbd.TestPhotoView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,6 +424,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9EZG3V6S8;
 				INFOPLIST_FILE = TestPhotoView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lbd.TestPhotoView;
 				PRODUCT_NAME = "$(TARGET_NAME)";

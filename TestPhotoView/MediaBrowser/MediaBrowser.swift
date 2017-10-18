@@ -272,8 +272,7 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
         
         
         hidesBottomBarWhenPushed = true
-//        automaticallyAdjustsScrollViewInsets = false
-        
+        automaticallyAdjustsScrollViewInsets = false
 //        extendedLayoutIncludesOpaqueBars = true
 //        navigationController?.view.backgroundColor = UIColor.white
         
@@ -588,10 +587,10 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
         }
         
         // Set style
-//        if !leaveStatusBarAlone && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.phone {
-//            previousStatusBarStyle = UIApplication.shared.statusBarStyle
+        if !leaveStatusBarAlone && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.phone {
+            previousStatusBarStyle = UIApplication.shared.statusBarStyle
 //            UIApplication.shared.setStatusBarStyle(statusBarStyle, animated: animated)
-//        }
+        }
 
         setNavBarAppearance(animated: animated)
         
@@ -673,9 +672,9 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
         setControlsHidden(hidden: false, animated: false, permanent: true)
         
         // Status bar
-//        if !leaveStatusBarAlone && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.phone {
+        if !leaveStatusBarAlone && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.phone {
 //            UIApplication.shared.setStatusBarStyle(previousStatusBarStyle, animated: animated)
-//        }
+        }
 
         // Super
         super.viewWillDisappear(animated)
@@ -779,7 +778,7 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
             pagingScrollView.frame = pagingScrollViewFrame
         }
         
-        skipNextPagingScrollViewPositioning = true
+        skipNextPagingScrollViewPositioning = false
         
         // Recalculate contentSize based on current orientation
         pagingScrollView.contentSize = contentSizeForPagingScrollView()
@@ -1019,38 +1018,38 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
         return self.placeholderImage?.image
     }
 
-//    func loadAdjacentPhotosIfNecessary(photo: Media) {
-//        let page = pageDisplayingPhoto(photo: photo)
-//        if let p = page {
-//            // If page is current page then initiate loading of previous and next pages
-//            let pageIndex = p.index
-//            if currentPageIndex == pageIndex {
-//                if pageIndex > 0  && mediaArray.count >= cachingImageCount {
-//                    // Preload index - 1
-//                    for i in 1...cachingImageCount {
-//                        if let media = mediaAtIndex(index: pageIndex - i) {
-//                            if nil == media.underlyingImage {
-//                                media.loadUnderlyingImageAndNotify()
-//                                print("Pre-loading image at index \(pageIndex - i)")
-//                            }
-//                        }
-//                    }
-//                }
-//
-//                if pageIndex < numberOfMedias - 1 {
-//                    // Preload index + 1
-//                    for i in 1...cachingImageCount {
-//                        if let media = mediaAtIndex(index: pageIndex + i) {
-//                            if nil == media.underlyingImage {
-//                                media.loadUnderlyingImageAndNotify()
-//                                print("Pre-loading image at index \(pageIndex + i)")
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
+    func loadAdjacentPhotosIfNecessary(photo: Media) {
+        let page = pageDisplayingPhoto(photo: photo)
+        if let p = page {
+            // If page is current page then initiate loading of previous and next pages
+            let pageIndex = p.index
+            if currentPageIndex == pageIndex {
+                if pageIndex > 0  && mediaArray.count >= cachingImageCount {
+                    // Preload index - 1
+                    for i in 1...cachingImageCount {
+                        if let media = mediaAtIndex(index: pageIndex - i) {
+                            if nil == media.underlyingImage {
+                                media.loadUnderlyingImageAndNotify()
+                                print("Pre-loading image at index \(pageIndex - i)")
+                            }
+                        }
+                    }
+                }
+
+                if pageIndex < numberOfMedias - 1 {
+                    // Preload index + 1
+                    for i in 1...cachingImageCount {
+                        if let media = mediaAtIndex(index: pageIndex + i) {
+                            if nil == media.underlyingImage {
+                                media.loadUnderlyingImageAndNotify()
+                                print("Pre-loading image at index \(pageIndex + i)")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     func startPreCaching() {
         if let d = delegate {
@@ -1069,7 +1068,7 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
                 if photo.underlyingImage != nil {
                     // Successful load
                     page.displayImage()
-//                    loadAdjacentPhotosIfNecessary(photo: photo)
+                    loadAdjacentPhotosIfNecessary(photo: photo)
                 } else {
                     // Failed to load
                     page.displayImageFailure()
@@ -1158,7 +1157,7 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
                 //MWLog(@"Removed page at index %lu", (unsigned long)pageIndex)
             }
         }
-        
+        // 확인 필요!
         visiblePages = visiblePages.subtracting(recycledPages)
         
         while recycledPages.count > 2 { // Only keep 2 recycled pages
@@ -1356,12 +1355,12 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
         // loaded. Also called after photo has been loaded in background
         let currentPhoto = mediaAtIndex(index: index)
         
-//        if let cp = currentPhoto {
-//            if cp.underlyingImage != nil {
-//                // photo loaded so load ajacent falsew
-//                loadAdjacentPhotosIfNecessary(photo: cp)
-//            }
-//        }
+        if let cp = currentPhoto {
+            if cp.underlyingImage != nil {
+                // photo loaded so load ajacent falsew
+                loadAdjacentPhotosIfNecessary(photo: cp)
+            }
+        }
         
         // Notify delegate
         if index != previousPageIndex {
@@ -1654,27 +1653,21 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
         // Setup player
         currentVideoPlayerViewController = AVPlayerViewController()//MPMoviePlayerViewController(contentURL: videoURL as URL!)
         if let playerVC = currentVideoPlayerViewController {
-            let player = AVPlayer(url: videoURL)//currentVideoPlayerViewController {
-      
-//            player.moviePlayer.prepareToPlay()
-//            player.moviePlayer.shouldAutoplay = true
-//            player.moviePlayer.scalingMode = .aspectFit
-//            player.modalTransitionStyle = .crossDissolve
+            let player = AVPlayer(url: videoURL)
         
             // Remove the movie player view controller from the "playback did finish" falsetification observers
             // Observe ourselves so we can get it to use the crossfade transition
-            currentVideoPlayerViewController?.player = player
             NotificationCenter.default.removeObserver(
                 player,
                 name: NSNotification.Name.AVPlayerItemFailedToPlayToEndTime,
                 object: player)
-            
+        
             NotificationCenter.default.addObserver(
                 self,
                 selector: #selector(videoFinishedCallback),
                 name: NSNotification.Name.AVPlayerItemFailedToPlayToEndTime,
                 object: player)
-            
+
             // Show
             player.play()
             present(playerVC, animated: true, completion: nil)
