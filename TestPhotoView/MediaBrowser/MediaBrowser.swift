@@ -2060,6 +2060,10 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
                 // Let delegate handle things
                 if let d = delegate {
                     d.actionButtonPressed(at: currentPageIndex, in: self, sender: sender)
+                    
+                    //open user album
+                    self.newIPVC()
+                    
                     return
                 }
 
@@ -2090,5 +2094,49 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
                 setControlsHidden(hidden: false, animated: true, permanent: true)
             }
         }
+    }
+}
+
+
+extension MediaBrowser : UIImagePickerControllerDelegate, UINavigationControllerDelegate
+{
+    
+    
+    func newIPVC() {
+        
+        let imagePickerVC = UIImagePickerController()
+        
+        // 設定相片的來源為行動裝置內的相本
+        imagePickerVC.sourceType = .photoLibrary
+        imagePickerVC.delegate = self
+        
+        // 設定顯示模式為popover
+        imagePickerVC.modalPresentationStyle = .popover
+        let popover = imagePickerVC.popoverPresentationController
+        // 設定popover視窗與哪一個view元件有關連
+        popover?.sourceView = self.view
+        
+        // 以下兩行處理popover的箭頭位置
+        popover?.sourceRect = self.view.bounds
+        popover?.permittedArrowDirections = .any
+        
+        self.present(imagePickerVC, animated: true, completion: nil)
+    }
+    
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        picker.alert(title: "是否上傳", msg: "", img: image,
+                     act1: "上傳", cancel: "取消",
+                     handleAct1: { _ in
+                        self.delegate?.uploadImage(img: image)
+        })
+
+       
+        
+    }
+    
+    public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
     }
 }

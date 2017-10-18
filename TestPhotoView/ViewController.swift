@@ -198,9 +198,16 @@ extension ViewController: MediaBrowserDelegate {
         self.selections[index] = selected
     }
     
+    
+    func actionButtonPressed(at photoIndex: Int, in mediaBrowser: MediaBrowser, sender: Any?) {
+        print("aaaa")
+    }
     //    func titleForPhotoAtIndex(index: Int, MediaBrowser: MediaBrowser) -> String {
     //    }
     
+    func uploadImage(img: UIImage) {
+        print("upload image")
+    }
     
 }
 

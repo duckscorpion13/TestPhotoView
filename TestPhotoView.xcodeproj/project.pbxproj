@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B80710060F4066537B7C9C3E /* Pods_TestPhotoView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19074B13B5A678919BAB16DC /* Pods_TestPhotoView.framework */; };
-		F9133E6A1F9714D80083D8A6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9133E5D1F9714A90083D8A6 /* Info.plist */; };
 		F9133E6B1F9714DD0083D8A6 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E5E1F9714A90083D8A6 /* Media.swift */; };
 		F9133E6C1F9714F00083D8A6 /* MediaBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E601F9714A90083D8A6 /* MediaBrowser.swift */; };
 		F9133E6D1F9714F40083D8A6 /* MediaBrowserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E621F9714A90083D8A6 /* MediaBrowserDelegate.swift */; };
@@ -22,13 +21,14 @@
 		F9661FAE1F94905300829EDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FAD1F94905300829EDE /* ViewController.swift */; };
 		F9661FB11F94905300829EDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9661FAF1F94905300829EDE /* Main.storyboard */; };
 		F9661FB61F94905300829EDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9661FB41F94905300829EDE /* LaunchScreen.storyboard */; };
+		F99C6B611F973C69005E6654 /* UIImagePickerControllerrExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99C6B601F973C69005E6654 /* UIImagePickerControllerrExtension.swift */; };
+		F99C6B631F97466F005E6654 /* MediaBrowser.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9133E611F9714A90083D8A6 /* MediaBrowser.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		19074B13B5A678919BAB16DC /* Pods_TestPhotoView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestPhotoView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D0AE93DDD000447746071A6 /* Pods-TestPhotoView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhotoView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhotoView/Pods-TestPhotoView.debug.xcconfig"; sourceTree = "<group>"; };
 		7E16B88468FAB965E1F34C35 /* Pods-TestPhotoView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhotoView.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhotoView/Pods-TestPhotoView.release.xcconfig"; sourceTree = "<group>"; };
-		F9133E5D1F9714A90083D8A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9133E5E1F9714A90083D8A6 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		F9133E5F1F9714A90083D8A6 /* MediaBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaBrowser.h; sourceTree = "<group>"; };
 		F9133E601F9714A90083D8A6 /* MediaBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaBrowser.swift; sourceTree = "<group>"; };
@@ -46,6 +46,7 @@
 		F9661FB01F94905300829EDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9661FB51F94905300829EDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9661FB71F94905300829EDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F99C6B601F973C69005E6654 /* UIImagePickerControllerrExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerControllerrExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +81,6 @@
 		F9133E5C1F9714A90083D8A6 /* MediaBrowser */ = {
 			isa = PBXGroup;
 			children = (
-				F9133E5D1F9714A90083D8A6 /* Info.plist */,
 				F9133E5E1F9714A90083D8A6 /* Media.swift */,
 				F9133E5F1F9714A90083D8A6 /* MediaBrowser.h */,
 				F9133E601F9714A90083D8A6 /* MediaBrowser.swift */,
@@ -92,6 +92,7 @@
 				F9133E661F9714A90083D8A6 /* MediaTapDetectingImageView.swift */,
 				F9133E681F9714A90083D8A6 /* MediaZoomingScrollView.swift */,
 				F9133E691F9714A90083D8A6 /* UIImageExtension.swift */,
+				F99C6B601F973C69005E6654 /* UIImagePickerControllerrExtension.swift */,
 			);
 			path = MediaBrowser;
 			sourceTree = "<group>";
@@ -189,7 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9133E6A1F9714D80083D8A6 /* Info.plist in Resources */,
+				F99C6B631F97466F005E6654 /* MediaBrowser.xcassets in Resources */,
 				F9661FB61F94905300829EDE /* LaunchScreen.storyboard in Resources */,
 				F9661FB11F94905300829EDE /* Main.storyboard in Resources */,
 			);
@@ -264,6 +265,7 @@
 				F9133E711F9715040083D8A6 /* MediaTapDetectingImageView.swift in Sources */,
 				F9133E6F1F9714FC0083D8A6 /* MediaGridCell.swift in Sources */,
 				F9133E701F9714FF0083D8A6 /* MediaGridViewController.swift in Sources */,
+				F99C6B611F973C69005E6654 /* UIImagePickerControllerrExtension.swift in Sources */,
 				F9661FAC1F94905300829EDE /* AppDelegate.swift in Sources */,
 				F9133E6B1F9714DD0083D8A6 /* Media.swift in Sources */,
 				F9133E741F9715100083D8A6 /* UIImageExtension.swift in Sources */,
@@ -404,6 +406,7 @@
 			baseConfigurationReference = 4D0AE93DDD000447746071A6 /* Pods-TestPhotoView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9EZG3V6S8;
 				INFOPLIST_FILE = TestPhotoView/Info.plist;
@@ -421,6 +424,7 @@
 			baseConfigurationReference = 7E16B88468FAB965E1F34C35 /* Pods-TestPhotoView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9EZG3V6S8;
 				INFOPLIST_FILE = TestPhotoView/Info.plist;

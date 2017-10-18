@@ -101,6 +101,9 @@ public protocol MediaBrowserDelegate: class {
      - Returns: Optional CGSize
      */
     func gridCellSize() -> CGSize?
+    
+    ///////////////////////////////
+    func uploadImage(img: UIImage)
 }
 
 public extension MediaBrowserDelegate {
@@ -123,4 +126,6 @@ public extension MediaBrowserDelegate {
     func title(for mediaBrowser: MediaBrowser, at index: Int) -> String? { return nil }
     
     func gridCellSize() -> CGSize? { return nil }
+    
+    
 }
