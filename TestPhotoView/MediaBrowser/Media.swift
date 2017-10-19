@@ -20,6 +20,9 @@ var PHInvalidImageRequestID = PHImageRequestID(0)
 /// Media is object for photo and video
 public class Media: NSObject {
     
+    /// Select
+    public var isSelected = false
+    
     /// caption
     public var caption = ""
     

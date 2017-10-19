@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var mediaArray = [Media]()
-    var selections = [Bool]()
+  
     var browser: MediaBrowser!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +37,6 @@ class ViewController: UIViewController {
         browser.cachingImageCount = 2
         browser.setCurrentIndex(at: 2)
         
-//        if (browser.displaySelectionButtons) {
-            self.selections.removeAll()
-
-            for _ in 0..<self.mediaArray.count {
-                self.selections.append(false)
-            }
-//        }
         
         if (0 == 0) {
             self.navigationController?.pushViewController(browser, animated: true)
@@ -188,7 +181,7 @@ extension ViewController: MediaBrowserDelegate {
     }
     
     func isMediaSelected(at index: Int, in mediaBrowser: MediaBrowser) -> Bool {
-        return self.selections[index]
+        return self.mediaArray[index].isSelected
         
     }
     
@@ -198,15 +191,17 @@ extension ViewController: MediaBrowserDelegate {
     }
     
     func mediaDid(selected: Bool, at index: Int, in mediaBrowser: MediaBrowser) {
-        self.selections[index] = selected
+        self.mediaArray[index].isSelected = selected
     }
     
     
     func removeCurrentImage(at photoIndex: Int) {
         print("remove \(photoIndex)")
         mediaArray.remove(at: photoIndex)
-        selections.remove(at: photoIndex)
-        self.browser.reloadData()
+        
+        DispatchQueue.main.async {
+            self.browser.reloadData()
+        }
     }
     //    func titleForPhotoAtIndex(index: Int, MediaBrowser: MediaBrowser) -> String {
     //    }
@@ -215,9 +210,11 @@ extension ViewController: MediaBrowserDelegate {
         print("remove \(ids)")
         for id in ids {
              mediaArray.remove(at: id)
-             selections.remove(at: id)
+             
         }
-         self.browser.reloadData()
+        DispatchQueue.main.async {
+            self.browser.reloadData()
+        }
     }
     
   

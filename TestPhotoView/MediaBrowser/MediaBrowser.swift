@@ -2070,13 +2070,15 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
                 // Let delegate handle things
                 if let d = delegate {
                     if(self.gridController == nil) {
+                        self.selectedIDs.remove(currentPageIndex)
                         d.removeCurrentImage(at: currentPageIndex)
                     } else {
                         //open user album
                         var ids = [Int]()
-                        for id in self.selectedIDs {
+                        for id in self.selectedIDs.sorted(by: >) {
                             ids.append(id)
                         }
+                        self.selectedIDs.removeAll()
                         d.removeSelectedImages(ids: ids)
                     }
                     return
