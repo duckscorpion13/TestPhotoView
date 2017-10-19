@@ -17,6 +17,8 @@ func floorcgf(x: CGFloat) -> CGFloat {
 
 /// MediaBrwoser is based in UIViewController, UIScrollViewDelegate and UIActionSheetDelegate. So you can push, or make modal.
 public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheetDelegate {
+    private var selectedIDs = Set<Int>()
+    
     private let padding = CGFloat(10.0)
 
     // Data
@@ -900,6 +902,8 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
             performLayout()
             view.setNeedsLayout()
         }
+        
+        self.gridController?.collectionView?.reloadData()
     }
 
     var numberOfMedias: Int {
@@ -998,6 +1002,12 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
     }
 
     func setPhotoSelected(selected: Bool, atIndex index: Int) {
+        if(selected) {
+            self.selectedIDs.insert(index)
+        } else {
+            self.selectedIDs.remove(index)
+        }
+        
         if displaySelectionButtons {
             if let d = delegate {
                 d.mediaDid(selected: selected, at: index, in: self)
@@ -1227,7 +1237,7 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
                     selectedButton.adjustsImageWhenHighlighted = false
                     selectedButton.addTarget(self, action: #selector(selectedButtonTapped), for: .touchUpInside)
                     selectedButton.frame = frameForSelectedButton(selectedButton: selectedButton, atIndex: index)
-                    pagingScrollView.addSubview(selectedButton)
+//                    pagingScrollView.addSubview(selectedButton)
                     page.selectedButton = selectedButton
                     selectedButton.isSelected = photoIsSelectedAtIndex(index: index)
                 }
@@ -2059,11 +2069,16 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
                 // If they have defined a delegate method then just message them
                 // Let delegate handle things
                 if let d = delegate {
-                    d.actionButtonPressed(at: currentPageIndex, in: self, sender: sender)
-                    
-                    //open user album
-                    self.newIPVC()
-                    
+                    if(self.gridController == nil) {
+                        d.removeCurrentImage(at: currentPageIndex)
+                    } else {
+                        //open user album
+                        var ids = [Int]()
+                        for id in self.selectedIDs {
+                            ids.append(id)
+                        }
+                        d.removeSelectedImages(ids: ids)
+                    }
                     return
                 }
 
@@ -2098,45 +2113,4 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
 }
 
 
-extension MediaBrowser : UIImagePickerControllerDelegate, UINavigationControllerDelegate
-{
-    
-    
-    func newIPVC() {
-        
-        let imagePickerVC = UIImagePickerController()
-        
-        // 設定相片的來源為行動裝置內的相本
-        imagePickerVC.sourceType = .photoLibrary
-        imagePickerVC.delegate = self
-        
-        // 設定顯示模式為popover
-        imagePickerVC.modalPresentationStyle = .popover
-        let popover = imagePickerVC.popoverPresentationController
-        // 設定popover視窗與哪一個view元件有關連
-        popover?.sourceView = self.view
-        
-        // 以下兩行處理popover的箭頭位置
-        popover?.sourceRect = self.view.bounds
-        popover?.permittedArrowDirections = .any
-        
-        self.present(imagePickerVC, animated: true, completion: nil)
-    }
-    
-    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        
-        picker.alert(title: "是否上傳", msg: "", img: image,
-                     act1: "上傳", cancel: "取消",
-                     handleAct1: { _ in
-                        self.delegate?.uploadImage(img: image)
-        })
 
-       
-        
-    }
-    
-    public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        self.dismiss(animated: true, completion: nil)
-    }
-}

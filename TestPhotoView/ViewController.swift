@@ -12,16 +12,19 @@ class ViewController: UIViewController {
     
     var mediaArray = [Media]()
     var selections = [Bool]()
-    
+    var browser: MediaBrowser!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.mediaArray = self.webPhotos()
         
     }
-    @IBAction func albumClick(_ sender: UIButton)
+    @IBAction func phoneAlbumClick(_ sender: UIButton) {
+        self.newIPVC()
+    }
+    @IBAction func webAlbumClick(_ sender: UIButton)
     {
-        let browser = MediaBrowser(delegate: self)
+        browser = MediaBrowser(delegate: self)
         browser.displayActionButton = true
         browser.displayMediaNavigationArrows = true
         browser.displaySelectionButtons = true
@@ -199,16 +202,25 @@ extension ViewController: MediaBrowserDelegate {
     }
     
     
-    func actionButtonPressed(at photoIndex: Int, in mediaBrowser: MediaBrowser, sender: Any?) {
-        print("aaaa")
+    func removeCurrentImage(at photoIndex: Int) {
+        print("remove \(photoIndex)")
+        mediaArray.remove(at: photoIndex)
+        selections.remove(at: photoIndex)
+        self.browser.reloadData()
     }
     //    func titleForPhotoAtIndex(index: Int, MediaBrowser: MediaBrowser) -> String {
     //    }
     
-    func uploadImage(img: UIImage) {
-        print("upload image")
+    func removeSelectedImages(ids: [Int]) {
+        print("remove \(ids)")
+        for id in ids {
+             mediaArray.remove(at: id)
+             selections.remove(at: id)
+        }
+         self.browser.reloadData()
     }
     
+  
 }
 
 

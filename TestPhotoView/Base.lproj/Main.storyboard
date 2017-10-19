@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,18 +18,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-uc-RNY">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="albumClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xij-oM-WQW"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lgU-F1-sdm">
+                                <rect key="frame" x="141.5" y="303.5" width="92" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-uc-RNY">
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                        <state key="normal" title="Web Album"/>
+                                        <connections>
+                                            <action selector="webAlbumClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sK7-7U-x0M"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxq-fI-OcD">
+                                        <rect key="frame" x="0.0" y="30" width="92" height="30"/>
+                                        <state key="normal" title="Phone Album"/>
+                                        <connections>
+                                            <action selector="phoneAlbumClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U12-DT-xf9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="iAd-uc-RNY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lew-0c-xiE"/>
-                            <constraint firstItem="iAd-uc-RNY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ttD-1Q-Pzo"/>
+                            <constraint firstItem="lgU-F1-sdm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="T1l-HP-r3b"/>
+                            <constraint firstItem="lgU-F1-sdm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YQQ-9V-KT4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

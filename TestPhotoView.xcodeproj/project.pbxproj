@@ -21,7 +21,7 @@
 		F9661FAE1F94905300829EDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FAD1F94905300829EDE /* ViewController.swift */; };
 		F9661FB11F94905300829EDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9661FAF1F94905300829EDE /* Main.storyboard */; };
 		F9661FB61F94905300829EDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9661FB41F94905300829EDE /* LaunchScreen.storyboard */; };
-		F99C6B611F973C69005E6654 /* UIImagePickerControllerrExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99C6B601F973C69005E6654 /* UIImagePickerControllerrExtension.swift */; };
+		F99C6B611F973C69005E6654 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99C6B601F973C69005E6654 /* UIViewControllerExtension.swift */; };
 		F99C6B631F97466F005E6654 /* MediaBrowser.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9133E611F9714A90083D8A6 /* MediaBrowser.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +46,7 @@
 		F9661FB01F94905300829EDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9661FB51F94905300829EDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9661FB71F94905300829EDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F99C6B601F973C69005E6654 /* UIImagePickerControllerrExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerControllerrExtension.swift; sourceTree = "<group>"; };
+		F99C6B601F973C69005E6654 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 				F9133E661F9714A90083D8A6 /* MediaTapDetectingImageView.swift */,
 				F9133E681F9714A90083D8A6 /* MediaZoomingScrollView.swift */,
 				F9133E691F9714A90083D8A6 /* UIImageExtension.swift */,
-				F99C6B601F973C69005E6654 /* UIImagePickerControllerrExtension.swift */,
+				F99C6B601F973C69005E6654 /* UIViewControllerExtension.swift */,
 			);
 			path = MediaBrowser;
 			sourceTree = "<group>";
@@ -265,7 +265,7 @@
 				F9133E711F9715040083D8A6 /* MediaTapDetectingImageView.swift in Sources */,
 				F9133E6F1F9714FC0083D8A6 /* MediaGridCell.swift in Sources */,
 				F9133E701F9714FF0083D8A6 /* MediaGridViewController.swift in Sources */,
-				F99C6B611F973C69005E6654 /* UIImagePickerControllerrExtension.swift in Sources */,
+				F99C6B611F973C69005E6654 /* UIViewControllerExtension.swift in Sources */,
 				F9661FAC1F94905300829EDE /* AppDelegate.swift in Sources */,
 				F9133E6B1F9714DD0083D8A6 /* Media.swift in Sources */,
 				F9133E741F9715100083D8A6 /* UIImageExtension.swift in Sources */,

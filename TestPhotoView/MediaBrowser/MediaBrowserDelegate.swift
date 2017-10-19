@@ -103,7 +103,8 @@ public protocol MediaBrowserDelegate: class {
     func gridCellSize() -> CGSize?
     
     ///////////////////////////////
-    func uploadImage(img: UIImage)
+    func removeSelectedImages(ids: [Int])
+    func removeCurrentImage(at photoIndex: Int)
 }
 
 public extension MediaBrowserDelegate {
