@@ -210,16 +210,6 @@ class MediaGridCell: UICollectionViewCell {
     
     //MARK: - Selection
     
-    override var isSelected: Bool {
-        set(sel) {
-            super.isSelected = sel
-            selectedButton.isSelected = sel
-        }
-        
-        get {
-            return super.isSelected
-        }
-    }
     
     @objc func selectionButtonPressed() {
         selectedButton.isSelected = !selectedButton.isSelected
