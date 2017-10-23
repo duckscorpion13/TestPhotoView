@@ -421,14 +421,20 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
      - Parameter size: size
      - Parameter coordinator: UIViewControllerTransitionCoordinator
      */
-    public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator)
+    {
+        self.rotating = true
         coordinator.animate(alongsideTransition: nil) { _ in
             self.toolbar.frame = self.frameForToolbar
+            self.rotating = false
         }
         
+      
+      
         super.viewWillTransition(to: size, with: coordinator)
+        
     }
-    
+   
     func performLayout() {
         // Setup
         performingLayout = true
@@ -1479,24 +1485,24 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
         if !viewIsActive || performingLayout || rotating {
             return
         }
-        
+
         // Tile pages
         tilePages()
-        
+
         // Calculate current page
         let visibleBounds = pagingScrollView.bounds
         var index = Int(floorf(Float(visibleBounds.midX / visibleBounds.width)))
         if index < 0 {
             index = 0
         }
-        
+
         if index > numberOfMedias - 1 {
             index = numberOfMedias - 1
         }
-        
+
         let previousCurrentPage = currentPageIndex
         currentPageIndex = index
-        
+
         if currentPageIndex != previousCurrentPage {
             didStartViewingPageAtIndex(index: index)
         }
