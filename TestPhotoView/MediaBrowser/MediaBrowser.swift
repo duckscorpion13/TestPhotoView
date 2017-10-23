@@ -51,6 +51,7 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
     private var gridController: MediaGridViewController?
     private var gridPreviousLeftNavItem: UIBarButtonItem?
     private var gridPreviousRightNavItem: UIBarButtonItem?
+    public var gridVisible = true
     
     // Appearance
     private var previousNavigationBarHidden = false
@@ -429,8 +430,6 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
             self.rotating = false
         }
         
-      
-      
         super.viewWillTransition(to: size, with: coordinator)
         
     }
@@ -835,40 +834,41 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
         return .all
     }
 
-    /// will rotate to interfaceOrientation
-    public override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
-        // Remember page index before rotation
-        pageIndexBeforeRotation = currentPageIndex
-        rotating = true
-        
-        // In iOS 7 the nav bar gets shown after rotation, but might as well do this for everything!
-        if areControlsHidden {
-            // Force hidden
-            navigationController?.isNavigationBarHidden = true
-        }
-    }
-    
-    /// will animate rotation
-    public override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
-        // Perform layout
-        currentPageIndex = pageIndexBeforeRotation
-        
-        // Delay control holding
-        hideControlsAfterDelay()
-        
-        // Layout
-        layoutVisiblePages()
-    }
-    
-    /// did rotate
-    public override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-        rotating = false
-        // Ensure nav bar isn't re-displayed
-        if let navi = navigationController, areControlsHidden {
-            navi.isNavigationBarHidden = false
-            navi.navigationBar.alpha = 0
-        }
-    }
+    //Deprecated
+//    /// will rotate to interfaceOrientation
+//    public override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+//        // Remember page index before rotation
+//        pageIndexBeforeRotation = currentPageIndex
+//        rotating = true
+//
+//        // In iOS 7 the nav bar gets shown after rotation, but might as well do this for everything!
+//        if areControlsHidden {
+//            // Force hidden
+//            navigationController?.isNavigationBarHidden = true
+//        }
+//    }
+//
+//    /// will animate rotation
+//    public override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+//        // Perform layout
+//        currentPageIndex = pageIndexBeforeRotation
+//
+//        // Delay control holding
+//        hideControlsAfterDelay()
+//
+//        // Layout
+//        layoutVisiblePages()
+//    }
+//
+//    /// did rotate
+//    public override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+//        rotating = false
+//        // Ensure nav bar isn't re-displayed
+//        if let navi = navigationController, areControlsHidden {
+//            navi.isNavigationBarHidden = false
+//            navi.navigationBar.alpha = 0
+//        }
+//    }
 
     //MARK: - Data
     var currentIndex: Int {
@@ -1243,7 +1243,7 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
                     selectedButton.adjustsImageWhenHighlighted = false
                     selectedButton.addTarget(self, action: #selector(selectedButtonTapped), for: .touchUpInside)
                     selectedButton.frame = frameForSelectedButton(selectedButton: selectedButton, atIndex: index)
-//                    pagingScrollView.addSubview(selectedButton)
+                    pagingScrollView.addSubview(selectedButton)
                     page.selectedButton = selectedButton
                     selectedButton.isSelected = photoIsSelectedAtIndex(index: index)
                 }
@@ -1808,6 +1808,8 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
                 },
                 completion: { finished in
                     gc.didMove(toParentViewController: self)
+                    
+                    self.gridVisible = true
                 })
         }
     }
@@ -1852,6 +1854,9 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
                     gc.removeFromParentViewController()
             
                     self.setControlsHidden(hidden: false, animated: true, permanent: false) // retrigger timer
+                    
+                    self.gridVisible = false
+
                 })
         }
     }
@@ -2075,18 +2080,7 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
                 // If they have defined a delegate method then just message them
                 // Let delegate handle things
                 if let d = delegate {
-                    if(self.gridController == nil) {
-                        self.selectedIDs.remove(currentPageIndex)
-                        d.removeCurrentImage(at: currentPageIndex)
-                    } else {
-                        //open user album
-                        var ids = [Int]()
-                        for id in self.selectedIDs.sorted(by: >) {
-                            ids.append(id)
-                        }
-                        self.selectedIDs.removeAll()
-                        d.removeSelectedImages(ids: ids)
-                    }
+                    d.actionButtonPressed(at: currentPageIndex, in: self, sender: sender)
                     return
                 }
 

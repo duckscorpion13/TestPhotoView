@@ -194,26 +194,28 @@ extension ViewController: MediaBrowserDelegate {
         self.mediaArray[index].isSelected = selected
     }
     
-    
-    func removeCurrentImage(at photoIndex: Int) {
-        print("remove \(photoIndex)")
-        mediaArray.remove(at: photoIndex)
+    func actionButtonPressed(at photoIndex: Int, in mediaBrowser: MediaBrowser, sender: Any?)
+    {
+        let counts = self.mediaArray.count
+        if(mediaBrowser.gridVisible) {
+            for i in 0 ..< counts {
+                //由後往前刪
+                let targetIndex = counts - (i + 1)
+                let media = self.mediaArray[targetIndex]
+                if(media.isSelected) {
+                    print("remove \(targetIndex)")
+                    self.mediaArray.remove(at: targetIndex)
+                }
+            }
+        } else {
+            print("remove \(photoIndex)")
+            self.mediaArray.remove(at: photoIndex)
+        }
         
-        DispatchQueue.main.async {
-            self.browser.reloadData()
-        }
-    }
-    //    func titleForPhotoAtIndex(index: Int, MediaBrowser: MediaBrowser) -> String {
-    //    }
-    
-    func removeSelectedImages(ids: [Int]) {
-        print("remove \(ids)")
-        for id in ids {
-             mediaArray.remove(at: id)
-             
-        }
-        DispatchQueue.main.async {
-            self.browser.reloadData()
+        if(self.mediaArray.count != counts) {
+            DispatchQueue.main.async {
+                self.browser.reloadData()
+            }
         }
     }
     
