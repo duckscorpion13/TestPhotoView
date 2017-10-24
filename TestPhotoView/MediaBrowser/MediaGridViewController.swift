@@ -85,9 +85,10 @@ class MediaGridViewController: UICollectionViewController, UICollectionViewDeleg
     
     //MARK: - Layout
     
-    var columns: CGFloat {
-        return floorcgf(x: view.bounds.width / 93.0)
-    }
+//    var columns: CGFloat {
+//        return floorcgf(x: view.bounds.width / 93.0)
+//    }
+    let columns: CGFloat = 3
     
     var margin = CGFloat(5.0)
     var gutter = CGFloat(5.0)

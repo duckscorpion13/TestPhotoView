@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
     }
     @IBAction func phoneAlbumClick(_ sender: UIButton) {
-        self.newIPVC()
+        self.showImgPickVC(delegae: self)
     }
     @IBAction func webAlbumClick(_ sender: UIButton)
     {
@@ -220,6 +220,27 @@ extension ViewController: MediaBrowserDelegate {
     }
     
   
+}
+
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate
+{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        picker.alert(title: "是否上傳", msg: "", img: image,
+                     act1: "上傳", cancel: "取消",
+                     handleAct1: { _ in
+                        //UploadImage(img: image)
+                        print("upload")
+        })
+        
+        
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 

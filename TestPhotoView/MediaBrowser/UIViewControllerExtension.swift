@@ -9,17 +9,18 @@
 import Foundation
 import UIKit
 
-extension UIViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate
+
+extension UIViewController
 {
     
     
-    func newIPVC() {
+    public func showImgPickVC(delegae: (UIImagePickerControllerDelegate & UINavigationControllerDelegate)) {
         
         let imagePickerVC = UIImagePickerController()
         
         // 設定相片的來源為行動裝置內的相本
         imagePickerVC.sourceType = .photoLibrary
-        imagePickerVC.delegate = self
+        imagePickerVC.delegate = delegae
         
         // 設定顯示模式為popover
         imagePickerVC.modalPresentationStyle = .popover
@@ -34,31 +35,12 @@ extension UIViewController: UIImagePickerControllerDelegate, UINavigationControl
         self.present(imagePickerVC, animated: true, completion: nil)
     }
     
-    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        
-        picker.alert(title: "是否上傳", msg: "", img: image,
-                     act1: "上傳", cancel: "取消",
-                     handleAct1: { _ in
-//                        self.delegate?.uploadImage(img: image)
-        })
-        
-        
-        
-    }
-    
-    public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        self.dismiss(animated: true, completion: nil)
-    }
-}
 
-extension UIViewController
-{
-    func alert(title: String, msg: String, img: UIImage? = nil,
-               act1: String? = nil, act2: String? = nil, cancel: String?,
-               handleAct1:  ((Any?) -> ())? = nil,
-               handleAct2: ((Any?) -> ())? = nil,
-               handleCancel: ((Any?) -> ())? = nil)
+    public func alert(title: String, msg: String, img: UIImage? = nil,
+                      act1: String? = nil, act2: String? = nil, cancel: String?,
+                      handleAct1:  ((Any?) -> ())? = nil,
+                      handleAct2: ((Any?) -> ())? = nil,
+                      handleCancel: ((Any?) -> ())? = nil)
     {
         let imgView = UIImageView(image: img)
         imgView.frame = self.view.frame
