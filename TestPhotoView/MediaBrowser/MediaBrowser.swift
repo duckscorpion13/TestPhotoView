@@ -539,6 +539,9 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
             toolbar.removeFromSuperview()
         } else {
             view.addSubview(toolbar)
+            if(self.gridVisible) {
+                view.sendSubview(toBack: toolbar)
+            }
         }
         
         // Update nav
@@ -1854,6 +1857,8 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
                     gc.removeFromParentViewController()
             
                     self.setControlsHidden(hidden: false, animated: true, permanent: false) // retrigger timer
+                    
+                    self.view.bringSubview(toFront: self.toolbar)
                     
                     self.gridVisible = false
 
