@@ -1,10 +1,12 @@
-	//
+//
 //  MediaZoomingScrollView.swift
 //  MediaBrowser
 //
 //  Created by Seungyoun Yi on 2017. 9. 6..
-//  Copyright © 2017년 Seungyoun Yi. All rights reserved.
+//  Created by Derek Yang on 2017.12.11
+//  Copyright © 2017 Seungyoun Yi. All rights reserved.
 //
+
 
 import UIKit
 //import UICircularProgressRing
@@ -188,9 +190,7 @@ class MediaZoomingScrollView: UIScrollView, UIScrollViewDelegate, TapDetectingIm
             if p.emptyImage {
                 if nil == loadingError {
                     loadingError = UIImageView()
-                    loadingError!.image = UIImage.imageForResourcePath(
-                        name: "ImageError",
-                        inBundle: Bundle(for: MediaZoomingScrollView.self))
+                    loadingError!.image = UIImage(named: "ImageError", in: Bundle(for: MediaZoomingScrollView.self), compatibleWith: nil)
                     
                     loadingError!.isUserInteractionEnabled = false
                     loadingError!.autoresizingMask =

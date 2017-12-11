@@ -13,7 +13,6 @@ import UIKit
 extension UIViewController
 {
     
-    
     public func showImgPickVC(delegae: (UIImagePickerControllerDelegate & UINavigationControllerDelegate)) {
         
         let imagePickerVC = UIImagePickerController()

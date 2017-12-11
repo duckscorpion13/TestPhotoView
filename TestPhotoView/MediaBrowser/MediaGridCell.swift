@@ -3,8 +3,10 @@
 //  MediaBrowser
 //
 //  Created by Seungyoun Yi on 2017. 9. 6..
-//  Copyright © 2017년 Seungyoun Yi. All rights reserved.
+//  Created by Derek Yang on 2017.12.11
+//  Copyright © 2017 Seungyoun Yi. All rights reserved.
 //
+
 
 import UIKit
 //import UICircularProgressRing
@@ -40,9 +42,10 @@ class MediaGridCell: UICollectionViewCell {
         
         // Video Image
         videoIndicator.isHidden = false
-        let videoIndicatorImage = UIImage.imageForResourcePath(
-            name: "VideoOverlay",
-            inBundle: Bundle(for: MediaGridCell.self))!
+        let videoIndicatorImage = UIImage(
+            named: "VideoOverlay",
+            in: Bundle(for: MediaGridCell.self),
+            compatibleWith: nil)!
         
         videoIndicator.frame = CGRect(
             x: self.bounds.size.width - videoIndicatorImage.size.width - videoIndicatorPadding,
@@ -60,14 +63,10 @@ class MediaGridCell: UICollectionViewCell {
         selectedButton.adjustsImageWhenHighlighted = false
         
         selectedButton.setImage(
-            UIImage.imageForResourcePath(
-                name: "ImageSelectedSmallOff",
-                inBundle: Bundle(for: MediaGridCell.self)),
+            UIImage(named: "ImageSelectedSmallOff", in: Bundle(for: MediaGridCell.self), compatibleWith: nil),
             for: .normal)
         
-        selectedButton.setImage(UIImage.imageForResourcePath(
-            name: "ImageSelectedSmallOn",
-            inBundle: Bundle(for: MediaGridCell.self)),
+        selectedButton.setImage(UIImage(named: "ImageSelectedSmallOn",in: Bundle(for: MediaGridCell.self), compatibleWith: nil),
                                 for: .selected)
         
         selectedButton.addTarget(self, action: #selector(MediaGridCell.selectionButtonPressed), for: .touchDown)
@@ -254,9 +253,7 @@ class MediaGridCell: UICollectionViewCell {
         if let p = photo, p.emptyImage {
             if nil == loadingError {
                 let error = UIImageView()
-                error.image = UIImage.imageForResourcePath(
-                    name: "ImageError",
-                    inBundle: Bundle(for: MediaGridCell.self))
+                error.image = UIImage(named: "ImageError", in: Bundle(for: MediaGridCell.self), compatibleWith: nil)
                 
                 error.isUserInteractionEnabled = false
                 error.sizeToFit()

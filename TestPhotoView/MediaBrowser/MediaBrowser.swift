@@ -3,7 +3,8 @@
 //  MediaBrowser
 //
 //  Created by Seungyoun Yi on 2017. 9. 6..
-//  Copyright © 2017년 Seungyoun Yi. All rights reserved.
+//  Created by Derek Yang on 2017.12.11
+//  Copyright © 2017 Seungyoun Yi. All rights reserved.
 //
 
 import UIKit
@@ -377,13 +378,15 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
         if displayMediaNavigationArrows {
             let arrowPathFormat = "UIBarButtonItemArrow"
             
-            let previousButtonImage = UIImage.imageForResourcePath(
-                name: arrowPathFormat + "Left",
-                inBundle: Bundle(for: MediaBrowser.self))
+            let previousButtonImage = UIImage(
+                named: arrowPathFormat + "Left",
+                in: Bundle(for: MediaBrowser.self),
+                compatibleWith: nil)
             
-            let nextButtonImage = UIImage.imageForResourcePath(
-                name: arrowPathFormat + "Right",
-                inBundle: Bundle(for: MediaBrowser.self))
+            let nextButtonImage = UIImage(
+                named: arrowPathFormat + "Right",
+                in: Bundle(for: MediaBrowser.self),
+                compatibleWith: nil)
             
             previousButton = UIBarButtonItem(
                 image: previousButtonImage,
@@ -492,7 +495,7 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
             hasItems = true
             
             items.append(UIBarButtonItem(
-                image: UIImage.imageForResourcePath(name: "UIBarButtonItemGrid", inBundle: Bundle(for: MediaBrowser.self)),
+                image: UIImage(named: "UIBarButtonItemGrid", in: Bundle(for: MediaBrowser.self), compatibleWith: nil),
                 style: .plain,
                 target: self,
                 action: #selector(MediaBrowser.showGridAnimated)))
@@ -986,7 +989,7 @@ public class MediaBrowser: UIViewController, UIScrollViewDelegate, UIActionSheet
             captionView = d.captionView(for: self, at: index)
             
             if let p = mediaAtIndex(index: index), nil == captionView {
-                if p.caption.characters.count > 0 {
+                if p.caption.count > 0 {
                     captionView = MediaCaptionView(media: p)
                 }
             }

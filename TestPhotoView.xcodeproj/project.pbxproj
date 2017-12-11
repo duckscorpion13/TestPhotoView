@@ -16,7 +16,6 @@
 		F9133E701F9714FF0083D8A6 /* MediaGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E651F9714A90083D8A6 /* MediaGridViewController.swift */; };
 		F9133E711F9715040083D8A6 /* MediaTapDetectingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E661F9714A90083D8A6 /* MediaTapDetectingImageView.swift */; };
 		F9133E731F97150C0083D8A6 /* MediaZoomingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E681F9714A90083D8A6 /* MediaZoomingScrollView.swift */; };
-		F9133E741F9715100083D8A6 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9133E691F9714A90083D8A6 /* UIImageExtension.swift */; };
 		F9661FAC1F94905300829EDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FAB1F94905300829EDE /* AppDelegate.swift */; };
 		F9661FAE1F94905300829EDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9661FAD1F94905300829EDE /* ViewController.swift */; };
 		F9661FB11F94905300829EDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9661FAF1F94905300829EDE /* Main.storyboard */; };
@@ -39,7 +38,6 @@
 		F9133E651F9714A90083D8A6 /* MediaGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGridViewController.swift; sourceTree = "<group>"; };
 		F9133E661F9714A90083D8A6 /* MediaTapDetectingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTapDetectingImageView.swift; sourceTree = "<group>"; };
 		F9133E681F9714A90083D8A6 /* MediaZoomingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaZoomingScrollView.swift; sourceTree = "<group>"; };
-		F9133E691F9714A90083D8A6 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		F9661FA81F94905300829EDE /* TestPhotoView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPhotoView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9661FAB1F94905300829EDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9661FAD1F94905300829EDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 				F9133E651F9714A90083D8A6 /* MediaGridViewController.swift */,
 				F9133E661F9714A90083D8A6 /* MediaTapDetectingImageView.swift */,
 				F9133E681F9714A90083D8A6 /* MediaZoomingScrollView.swift */,
-				F9133E691F9714A90083D8A6 /* UIImageExtension.swift */,
 				F99C6B601F973C69005E6654 /* UIViewControllerExtension.swift */,
 			);
 			path = MediaBrowser;
@@ -268,7 +265,6 @@
 				F99C6B611F973C69005E6654 /* UIViewControllerExtension.swift in Sources */,
 				F9661FAC1F94905300829EDE /* AppDelegate.swift in Sources */,
 				F9133E6B1F9714DD0083D8A6 /* Media.swift in Sources */,
-				F9133E741F9715100083D8A6 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

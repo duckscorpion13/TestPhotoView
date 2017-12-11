@@ -3,8 +3,10 @@
 //  MediaBrowser
 //
 //  Created by Seungyoun Yi on 2017. 9. 6..
-//  Copyright © 2017년 Seungyoun Yi. All rights reserved.
+//  Created by Derek Yang on 2017.12.11
+//  Copyright © 2017 Seungyoun Yi. All rights reserved.
 //
+
 
 import UIKit
 
